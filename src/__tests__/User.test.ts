@@ -12,7 +12,7 @@ describe("User", () => {
     it("should be able to create a new user", async () => {
         const response = await request(app).post("/users")
         .send({
-            name: "User name",
+            name: "User's name",
             email: "user@gmail.com"
         })
 
@@ -22,7 +22,7 @@ describe("User", () => {
     it("should not be able to create user with an email that already exits", async () => {
         const response = await request(app).post("/users")
         .send({
-            name: "User name",
+            name: "User's name",
             email: "user@gmail.com"
         })
 
